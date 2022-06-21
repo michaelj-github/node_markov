@@ -1,5 +1,19 @@
 # Markov Machines
 
+```
+// http://www.gutenberg.org/files/11/11-0.txt // Alice
+// https://www.gutenberg.org/cache/epub/1524/pg1524.txt // Hamlet
+// https://www.gutenberg.org/files/2701/2701-0.txt // Moby Dick
+// https://www.gutenberg.org/cache/epub/228/pg228.txt // THE AENEID
+
+// ##########################################################
+// run in terminal:
+// node makeText.js http://www.gutenberg.org/files/11/11-0.txt
+// or
+// node makeText.js testtext.txt
+// ##########################################################
+```
+
 A Markov Machine emits output of a “Markov Chain.”
 
 A Markov Chain is a chain of possible outcomes, given a particular “state”.
