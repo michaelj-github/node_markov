@@ -30,6 +30,7 @@ class MarkovMachine {
     }
     this.chain = aChain;
     this.theChainKeys = theChainKeys;
+    // console.log("this.chain = ", this.chain)
   }
 
   /** return random text from chains */
@@ -38,7 +39,7 @@ class MarkovMachine {
     // TODO
     let theText = [];
     let theChainKey = this.theChainKeys[Math.floor(Math.random() * this.theChainKeys.length)];
-    while (theText.length < numWords && theChainKey !== null) {    
+    while (this.chain.get(theChainKey) && theText.length < numWords && theChainKey !== null) {    
       theText.push(theChainKey)
       theChainKey = this.chain.get(theChainKey)[Math.floor(Math.random() * this.chain.get(theChainKey).length)]      
     }
@@ -49,3 +50,5 @@ class MarkovMachine {
 module.exports = {
   MarkovMachine,
 };
+
+
